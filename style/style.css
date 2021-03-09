@@ -7,6 +7,11 @@
 body{
   background: linear-gradient(
     265deg, #98989842, #70ecebe3, #70eceb, #a2dce863);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
 }
 .d-flex{
   display: flex;
@@ -83,7 +88,7 @@ main{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    /* transition: 2s; */
+    transition: 2s;
 }
 .todo-content i{
   padding-left: 1rem;
@@ -101,6 +106,7 @@ main{
   left: 28px;
   font-weight: bold;
   color: #cccccc;
+  transition: 2s;
 }
 .fa-check{
   color: #3caf3a;
@@ -147,7 +153,8 @@ button, button:focus, button:hover{
 }
 
 .transition{
-  /* transition:2s; */
-  transform: translate(3rem) rotateZ(5deg);
-  opacity: 1;
+  transition: 2s;
+  transform: translate(1rem) rotateZ(3deg
+);
+  opacity: 0.5;
 }

@@ -18,7 +18,7 @@ function addList(e){
   todolist.innerHTML = inputField.value;
   todolist.classList.add('todos');
   todoDiv.appendChild(todolist);
-  saveLocalStorage(inputField.value);
+  // saveLocalStorage(inputField.value);
   // Creating the check icon
 
   let completedIcon = document.createElement('button');
@@ -68,13 +68,13 @@ function deleteTodo(e){
 }
 
 
-function saveLocalStorage(todo){
-  let todos;
-  if(localStorage.getItem("todos") === null){
-    todos = [];
-  }else{
-    todos = JSON.parse(localStorage.getItem('todos'));
-  }
-  todos.push(todo);
-  localStorage.setItem('todos', JSON.stringify(todos));
-}
+// function saveLocalStorage(todo){
+//   let todos;
+//   if(localStorage.getItem("todos") === null){
+//     todos = [];
+//   }else{
+//     todos = JSON.parse(localStorage.getItem('todos'));
+//   }
+//   todos.push(todo);
+//   localStorage.setItem('todos', JSON.stringify(todos));
+// }
