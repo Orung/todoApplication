@@ -89,6 +89,7 @@ main{
     align-items: center;
     position: relative;
     transition: 2s;
+    border: 1px solid #d8d4d4
 }
 .todo-content i{
   padding-left: 1rem;
@@ -154,7 +155,24 @@ button, button:focus, button:hover{
 
 .transition{
   transition: 2s;
-  transform: translate(1rem) rotateZ(3deg
-);
+  transform: translate(1rem) rotateZ(3deg);
   opacity: 0.5;
+}
+#todo-list{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.mx-auto{
+  margin: 0 auto;
+}
+@media(max-width: 900px){
+  #todo-list{
+    display: block;
+  }
+  .w-50{
+    width: 100%;
+  }
+  main{
+    width: 100%;
+  }
 }
