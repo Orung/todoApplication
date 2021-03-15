@@ -9,10 +9,11 @@ let todoUl = document.querySelector('ul');
 let category = document.querySelector('#category')
 let nextButton = document.querySelector('#next-todos');
 
-// Event Listeners
+// Event Listeners 
 nameButton.addEventListener("click", welcomeName);
 // addTodo.addEventListener('click', addTodoList);
-document.addEventListener('DOMContentLoaded', getTodos);
+// document.addEventListener('DOMContentLoaded', getTodos);
+window.onload = () => getTodos();
 todoUl.addEventListener('click', deleteTodoList);
 nextButton.addEventListener('click', nextTodos)
 
@@ -70,13 +71,24 @@ formSubmit.onsubmit = function(x){
 
 // Deleting Todo
 function deleteTodoList(e){
+  let todostore = void 0;
+  if(localStorage.getItem('todos') === null){
+    todostore = [];
+  }else{
+    todostore = JSON.parse(localStorage.getItem('todos'));
+  }
  let item = e.target;
- console.log(item.textContent)
+ const parentEl = item.parentElement.parentElement;
+ const textContent = parentEl.textContent
+ const index = todostore.findIndex(todo => todo === textContent);
+ todostore.splice(index, 1);
+ localStorage.setItem("todos", JSON.stringify(todostore));
+ parentEl.remove()
 //  console.log(item);
- if(item.classList[0] === 'remove'){
-   item.parentElement.parentElement.remove()
+ // if(item.classList[0] === 'remove'){
+   // item.parentElement.parentElement.remove()
    // removeLocalStorage(todo);
- }
+ // }
 }
 
 function savetoLocalStorage(todo){
@@ -125,18 +137,21 @@ function getTodos(){
 }
 
 //removing todo from localstorage
-function removeLocalStorage(todo){
-  let todos;
-  if(localStorage.getItem('todos') === null){
-    todos = [];
-  }else{
-    todos = JSON.parse(localStorage.getItem('todos'));
-  }
+// function removeLocalStorage(todo){
+//   let todos;
+//   if(localStorage.getItem('todos') === null){
+//     todos = [];
+//   }else{
+//     todos = JSON.parse(localStorage.getItem('todos'));
+//   }
   
-}
-//adding rhe nex button
+// }
+
+
+//adding the next button
 function nextTodos(e){
-  let todostore;
+  console.log(e);
+  let todostore = void 0;
   if(localStorage.getItem('todos') === null){
     todostore = [];
   }else{
