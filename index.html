@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <section id="landing_page" class="text-center main-page transition">
+      <div class="img">
+        <img src="images/complete-image.png" alt="completed image for landing page" srcset="" width="50%">
+      </div>
+      <h1 class="title my-2">LIST OUT WHAT YOU WANT TO ACHIEVE TODAY</h1>
+      <h3 class="title my-2">Please start by telling us your name:</h3>
+      <form action="">
+        <input type="text" name="fullname" id="fullname" placeholder="Ready! Your first name and last name">
+        <button class="btn-primary" id="nameButton">Add Task</button>
+      </form>
+      <p class="error-message"></p>
+    </section>
+    <section id="welcome-section" class="mt-2 text-center transition d-none">
+      <h1 class="title my-5" >WELCOME <span id="ownerName"></span></h1>
+      <div class="sm-cards mt-2">
+        <div class="card">
+          <h3>0</h3>
+          <h3>All todos</h3>
+        </div>
+        <div class="card">
+          <h3>0</h3>
+          <h3>All todos</h3>
+        </div>
+        <div class="card">
+          <h3>0</h3>
+          <h3>All todos</h3>
+        </div>
+      </div>
+      <div class="my-5">
+        <form action="" class="d-flex form-width" id="formSubmit">
+          <input type="text" name="name" id="todoInput" placeholder="Ready! Your first name and last name" >
+          <button class="btn-primary" id="add-todo" >Add Task</button>
+        </form>
+      </div>
+      <div class="forward-arrow" id="next-todos">
+        <i class="fa fa-arrow-right"></i>
+      </div>
+    </section>
+    <section id="category" class="transition d-none">
+      <h2 class="title my-2">CATEGORY</h2>
+      <div id="buttons">
+        <button class="btn-primary font-weight-bolder">All Todo</button>
+        <button class="btn-primary font-weight-bolder">Waiting</button>
+        <button class="btn-primary font-weight-bolder">Completed</button>
+      </div>
+      <div class="my-2">
+        <h2>20/3/2021</h2>
+        <ul class="mt-2 transition">
+          <!-- <li class="d-flex background-white mb-2">
+            <span>Go shopping for mum</span>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-check"></i></button>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-edit"></i></button>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-trash"></i></button>
+          </li>
+          <li class="d-flex background-white">
+            <span>Go shopping for mum</span>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-check"></i></button>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-edit"></i></button>
+            <button class="btn-default font-weight-bolder"><i class="fa fa-trash"></i></button>
+          </li> -->
+        </ul>
+      </div>
+      <div class="forward-arrow">
+        <i class="fa fa-plus"></i>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="https://use.fontawesome.com/f5fd6228f5.js"></script>
+</body>
+</html>
