@@ -51,6 +51,10 @@ input:focus{
   border-radius: 29px;
   opacity: 0.6;
 }
+.completed{
+  background-color: #d1d0d8;
+  text-decoration: line-through;
+}
 input:hover{
   outline: none;  
   border: 1px solid #6C63FF;
