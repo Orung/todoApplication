@@ -79,6 +79,9 @@ function createTodo(x){
 
     // appending all list to the ul parent element
     todoUl.appendChild(todoLi);
+
+    todoInput.value = "";
+
   }
 }
 
@@ -89,6 +92,15 @@ function removeItem(e){
   //removing todos
   if (item.classList[0] === 'remove'){
     item.parentElement.parentElement.remove();
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+      todos = [];
+    } else {
+      todos= JSON.parse(localStorage.getItem('todos'));
+    }
+    let todoIndex = item.parentElement.parentElement.children[0].innerHTML;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
   //mark as done
   else if (item.classList[0] === 'done'){
@@ -106,9 +118,9 @@ function getCompletedTodo(e){
       todo.style.display = "flex";
     }else{
       todo.style.display = 'none';
-      let paragraph = document.createElement('p');
-      paragraph.innerHTML = "no completed todos";
-      todoUl.appendChild(paragraph);
+      // let paragraph = document.createElement('p');
+      // paragraph.innerHTML = "no completed todos";
+      // todoUl.appendChild(paragraph);
     }
   })
 }
@@ -184,26 +196,21 @@ function getFromLocalStorage(){
 
     // appending all list to the ul parent element
     todoUl.appendChild(todoLi);
-  })
+  });
 }
 
-//removing Item from storage
-// function removeFromLocalStorage(todo){
-//   let todos;
-//   if (localStorage.getItem("todos") === null) {
-//     todos = [];
-//   } else {
-//     todos= JSON.parse(localStorage.getItem('todos'));
-//   }
-//   console.log(todo)
-// }
 
+// Icons
 function showTodoInput(){
   addTodoDiv.classList.remove('d-none');
   todoList.classList.add('d-none');
 }
+
 function viewTodoInput(){
-  console.log('clicked')
+ if(localStorage.geItem("todos") === null){
+  alert('You don\'t have any todo yet. Add a todo to view list of todos');
+ }else{
   addTodoDiv.classList.add('d-none');
-  todoList.classList.remove('d-none');
+  todoList.classList.remove('d-none')
+ }
 }
