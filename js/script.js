@@ -11,8 +11,9 @@ let todoList = document.querySelector('#category');
 let completedTodo = document.querySelector('#completed');
 let waitingTodo = document.querySelector('#waiting');
 let allTodos = document.querySelector('#all');
-let nextIcon = document.querySelector('#next-todos')
-
+let nextIcon = document.querySelector('#next-todos');
+let showInput = document.querySelector('#showInput')
+let viewTodo = document.querySelector('#next-todos');
 
 
 // event listeners
@@ -24,7 +25,8 @@ completedTodo.addEventListener('click', getCompletedTodo);
 waitingTodo.addEventListener('click', getwaitingTodo);
 allTodos.addEventListener('click', getAllTodos);
 // nextIcon.addEventListener('click', getAllTodosContent);
-
+showInput.addEventListener('click', showTodoInput);
+viewTodo.addEventListener('click', viewTodoInput);
 
 
 // functions
@@ -62,7 +64,7 @@ function createTodo(x){
     saveToLocalStorage(todoInput.value)
     todoLi.appendChild(todoText);
 
-    //creating todos button
+    // creating todos button
     // creating edit buttons
     let todoEdit = document.createElement('button');
     todoEdit.classList.add('btn-default')
@@ -195,3 +197,13 @@ function getFromLocalStorage(){
 //   }
 //   console.log(todo)
 // }
+
+function showTodoInput(){
+  addTodoDiv.classList.remove('d-none');
+  todoList.classList.add('d-none');
+}
+function viewTodoInput(){
+  console.log('clicked')
+  addTodoDiv.classList.add('d-none');
+  todoList.classList.remove('d-none');
+}
