@@ -15,32 +15,32 @@
       </div>
       <h1 class="title my-2">LIST OUT WHAT YOU WANT TO ACHIEVE TODAY</h1>
       <h3 class="title my-2">Please start by telling us your name:</h3>
-      <form action="">
+      <form action="" id="submitName">
         <input type="text" name="fullname" id="fullname" placeholder="Ready! Your first name and last name">
-        <button class="btn-primary" id="nameButton">Add Task</button>
+        <button class="btn-primary mt-2" id="nameButton">Add Task</button>
       </form>
       <p class="error-message"></p>
     </section>
-    <section id="welcome-section" class="mt-2 text-center transition d-none">
-      <h1 class="title my-5" >WELCOME <span id="ownerName"></span></h1>
+    <section id="addTodoDiv" class="mt-2 text-center transition d-none">
+      <h1 class="title my-5" >WELCOME <span id="displayUserName"></span></h1>
       <div class="sm-cards mt-2">
         <div class="card">
-          <h3>0</h3>
+          <h3 id="all_todo_no">0</h3>
           <h3>All todos</h3>
         </div>
         <div class="card">
           <h3>0</h3>
-          <h3>All todos</h3>
+          <h3>Completed Todo(s)</h3>
         </div>
         <div class="card">
           <h3>0</h3>
-          <h3>All todos</h3>
+          <h3>Waiting Todo(s)</h3>
         </div>
       </div>
       <div class="my-5">
-        <form action="" class="d-flex form-width" id="formSubmit">
+        <form action="" class="d-flex form-width" id="addTodoForm">
           <input type="text" name="name" id="todoInput" placeholder="Ready! Your first name and last name" >
-          <button class="btn-primary" id="add-todo" >Add Task</button>
+          <button class="btn-primary ms-mt-2" id="add-todo" >Add Task</button>
         </form>
       </div>
       <div class="forward-arrow" id="next-todos">
@@ -50,25 +50,19 @@
     <section id="category" class="transition d-none">
       <h2 class="title my-2">CATEGORY</h2>
       <div id="buttons">
-        <button class="btn-primary font-weight-bolder">All Todo</button>
-        <button class="btn-primary font-weight-bolder">Waiting</button>
-        <button class="btn-primary font-weight-bolder">Completed</button>
+        <button class="btn-primary font-weight-bolder" id="all">All Todo</button>
+        <button class="btn-primary font-weight-bolder" id="waiting">Waiting</button>
+        <button class="btn-primary font-weight-bolder" id="completed">Completed</button>
       </div>
       <div class="my-2">
         <h2>20/3/2021</h2>
-        <ul class="mt-2 transition">
+        <ul class="mt-2 transition" id="todoUl">
           <!-- <li class="d-flex background-white mb-2">
             <span>Go shopping for mum</span>
             <button class="btn-default font-weight-bolder"><i class="fa fa-check"></i></button>
             <button class="btn-default font-weight-bolder"><i class="fa fa-edit"></i></button>
             <button class="btn-default font-weight-bolder"><i class="fa fa-trash"></i></button>
-          </li>
-          <li class="d-flex background-white">
-            <span>Go shopping for mum</span>
-            <button class="btn-default font-weight-bolder"><i class="fa fa-check"></i></button>
-            <button class="btn-default font-weight-bolder"><i class="fa fa-edit"></i></button>
-            <button class="btn-default font-weight-bolder"><i class="fa fa-trash"></i></button>
-          </li> -->
+          </li>-->
         </ul>
       </div>
       <div class="forward-arrow">

@@ -25,6 +25,9 @@ body{
   color: #6C63FF;
   font-weight: bolder;
 }
+.d-block{
+  display: block;
+}
 .my-1{
   margin: 1rem 0 !important;
 }
@@ -50,6 +53,10 @@ input:focus{
   border: 1px solid #6C63FF;
   border-radius: 29px;
   opacity: 0.6;
+}
+.completed{
+  background-color: #d1d0d8;
+  text-decoration: line-through;
 }
 input:hover{
   outline: none;  
@@ -207,5 +214,11 @@ ul{
 section{
   width: 90%;
   margin:auto
+}
+#buttons button{
+    margin-bottom: 2rem;
+}
+.ms-mt-2{
+  margin-top: 1rem;
 }
 }
