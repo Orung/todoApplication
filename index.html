@@ -17,7 +17,7 @@
       <h3 class="title my-2">Please start by telling us your name:</h3>
       <form action="" id="submitName">
         <input type="text" name="fullname" id="fullname" placeholder="Ready! Your first name and last name">
-        <button class="btn-primary" id="nameButton">Add Task</button>
+        <button class="btn-primary mt-2" id="nameButton">Add Task</button>
       </form>
       <p class="error-message"></p>
     </section>
@@ -25,22 +25,22 @@
       <h1 class="title my-5" >WELCOME <span id="displayUserName"></span></h1>
       <div class="sm-cards mt-2">
         <div class="card">
-          <h3>0</h3>
+          <h3 id="all_todo_no">0</h3>
           <h3>All todos</h3>
         </div>
         <div class="card">
           <h3>0</h3>
-          <h3>All todos</h3>
+          <h3>Completed Todo(s)</h3>
         </div>
         <div class="card">
           <h3>0</h3>
-          <h3>All todos</h3>
+          <h3>Waiting Todo(s)</h3>
         </div>
       </div>
       <div class="my-5">
         <form action="" class="d-flex form-width" id="addTodoForm">
           <input type="text" name="name" id="todoInput" placeholder="Ready! Your first name and last name" >
-          <button class="btn-primary" id="add-todo" >Add Task</button>
+          <button class="btn-primary ms-mt-2" id="add-todo" >Add Task</button>
         </form>
       </div>
       <div class="forward-arrow" id="next-todos">
@@ -50,7 +50,7 @@
     <section id="category" class="transition d-none">
       <h2 class="title my-2">CATEGORY</h2>
       <div id="buttons">
-        <button class="btn-primary font-weight-bolder">All Todo</button>
+        <button class="btn-primary font-weight-bolder" id="all">All Todo</button>
         <button class="btn-primary font-weight-bolder" id="waiting">Waiting</button>
         <button class="btn-primary font-weight-bolder" id="completed">Completed</button>
       </div>

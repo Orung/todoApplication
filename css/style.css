@@ -25,6 +25,9 @@ body{
   color: #6C63FF;
   font-weight: bolder;
 }
+.d-block{
+  display: block;
+}
 .my-1{
   margin: 1rem 0 !important;
 }
@@ -211,5 +214,11 @@ ul{
 section{
   width: 90%;
   margin:auto
+}
+#buttons button{
+    margin-bottom: 2rem;
+}
+.ms-mt-2{
+  margin-top: 1rem;
 }
 }
